@@ -1,0 +1,16 @@
+build/
+dist/
+.DS_Store
+._*
+__pycache__/
+*.pyc
+DerivedData/
+xcuserdata/
+.swiftpm/
+.build/
+.env
+.env.*
+*.p12
+*.p8
+*.pfx
+*.mobileprovision

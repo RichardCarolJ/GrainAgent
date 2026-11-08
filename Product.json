@@ -1,0 +1,12 @@
+{
+  "name": "GrainAgent",
+  "version": "1.0.1",
+  "build": "29",
+  "bundle_id": "io.github.richardcaroljy.GrainAgent",
+  "maintainer": "Richard Jin",
+  "repository": "https://github.com/RichardCarolJ/GrainAgent",
+  "release_tag_prefix": "v",
+  "public_release_channel": false,
+  "minimum_macos": "14.0",
+  "architecture": "arm64"
+}

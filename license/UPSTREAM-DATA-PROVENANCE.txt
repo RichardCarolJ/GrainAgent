@@ -1,0 +1,60 @@
+GrainAgent — inherited imaging data provenance
+=============================================
+
+GrainAgent 1.0.1, Richard Jin, 2026-11-07.
+Pinned application base: SpektraLab 1.3.5
+Commit: 02d82b56cf65f0f8e802a708612edc4e9a4790af
+Source: https://github.com/JamesQiu2005/SpektraLab/tree/02d82b56cf65f0f8e802a708612edc4e9a4790af
+Reference model: spektrafilm, Andrea Volpato
+Source: https://github.com/andreavolpato/spektrafilm
+
+This release retains the data and licensing structure shipped by SpektraLab.
+No imaging tables, film/paper profiles, print LUTs or rendering mathematics
+have been modified by GrainAgent. Data bytes are inherited, not new
+measurements by Richard Jin.
+
+1. Original profiles and print-preview LUTs
+
+The 28 original film/paper profiles and the 8 derived print-preview LUTs carry
+SPEKTRAFILM_LICENSE.txt (CC BY-SA 4.0) and the unchanged upstream
+Profiles-and-LUTs-CHANGELOG.txt. The changelog describes the original bake and
+identifies Andrea Volpato and the canonical source.
+
+2. SpektraLab additions
+
+Additional measured/fitted product profiles and aliases keep the unchanged
+engine/resources_product/NOTICE.md, including their manufacturer-datasheet
+references and SpektraLab provenance. These additions are not attributed to
+Andrea Volpato as his measured data.
+
+3. Other baked colour-science constants
+
+SpektraLab's original changelog separates the CIE observer, illuminants,
+colour-space matrices, chromatic-adaptation matrices, Mallett basis, Hanatos
+irradiance spectra and KG3/lens curves from the profile-derived print LUTs.
+Its original text says those tables are published colour-science data and
+are not covered by that profile/LUT changelog.
+
+The inherited provenance is engine/tools/bake_resources.py: bake_colour,
+bake_spectra and bake_filters. The Hanatos spectra are loaded by the reference
+project from spektrafilm/data/luts/spectral_upsampling/irradiance_xy_tc.npy;
+its spectral_upsampling.py credits hanatos for the LUTs and sample code.
+The pinned SpektraLab bundle does not provide an additional per-table licence
+file for these constants. GrainAgent preserves this upstream distinction;
+this provenance record does not relicense them as GrainAgent artwork or
+claim a separate permission from the data contributors.
+
+4. Code and other bundled components
+
+Application/engine: GPL-3.0-or-later, original notices retained.
+metal-cpp: Apache-2.0, original licence retained.
+Apple system libraries are supplied by macOS.
+
+5. Exact inherited resource checksums
+
+f2c06600606fa169171f58b6639d2669f372a2b39ebe9c72e3edeff5f6d7d31d  Resources/engine/spektrafilm_constants.bin
+82923348a03b4a0cd3d3f68cdda69d2e513ce06178addd99cf08b288d0693b91  Resources/engine/spektrafilm.metallib
+292b36e7e4a9a7555032cd565b180d0cf6c0da21c80f2210ccaaf9b77732c1dd  Resources/engine/print_luts.json
+8bbf8d8db76aecdc9e94bc0b1e31f3329553eeda56d210ab36294fa5e4bf3b13  Resources/engine/neutral_print_filters.json
+
+No personal photographs, edits, caches or workspaces are part of these resources.

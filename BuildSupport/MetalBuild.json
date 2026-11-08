@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "minimum_macos": "14.0",
+  "baseline": "GrainAgent 1.0.1 Build 27",
+  "compiler": "Apple metal 32023.864 (metalfe-32023.864)",
+  "compiler_signature": "Apple Code Signing Certification Authority / Apple Root CA",
+  "compiler_download_sha256": "1221b27e7501b2b0ff2ceeb1713cc070abe34caa7885ab7bae70e00ea80438ef",
+  "engine_flags": [
+    "-fmetal-math-mode=safe",
+    "-fmetal-math-fp32-functions=precise",
+    "-mmacos-version-min=14.0",
+    "-Werror"
+  ],
+  "canvas_flags": [
+    "-mmacos-version-min=14.0",
+    "-ffast-math"
+  ],
+  "source_sha256": {
+    "engine/src/shaders/blur.metal": "24c4fb9a1b372e6737e7cd8b7471f83128de5c3766734eff1f69ca897cf69a6f",
+    "engine/src/shaders/contrast_mask.metal": "a35c75d56f93c848c41af2ea0ac46c6fd269abb2f2e64d7a90d3c3c46f21d5e3",
+    "engine/src/shaders/gamut.metal": "0bbdc307240a2b3a791e1a05d70aa861c2076343376173f196e664240f348874",
+    "engine/src/shaders/grain.metal": "8089ca27cb203eb6c638d92dc9fcb999519b4e6c23b186d770dfe0d512031ff7",
+    "engine/src/shaders/nodes.metal": "0220d05657dd01ae9d42286bebc7ae81b1d22cf9f1837313823301b16aa89dab",
+    "engine/src/shaders/overscan.metal": "56cbe1f8d6d25cc91fdf013180aff1a2d1a59d4f342cd483399381c37bf2c62b",
+    "engine/src/shaders/scene_latitude.metal": "52ebaf4034f4889fbfafd3f8f445bed07de8d7accf279a9ba3dcca968e357ec4",
+    "engine/src/shaders/util.metal": "26920f4346cf2c00c403d5dd4b95639e174229f7a72d070a29a86feea83da7d2",
+    "modern_UI/Spektrafilm/Spektrafilm/Canvas/Shaders.metal": "90bc918b4c62a22b42c464bd47e716b4c955567984377deaddd2228b71bb87e1"
+  },
+  "library_sha256": {
+    "BuildSupport/Precompiled/default.metallib": "699ab898b03a41f7eef6a704cb03f0b7052d31e6eb0c8e2aa55c09a4f3ec839e",
+    "modern_UI/Spektrafilm/Spektrafilm/Resources/engine/spektrafilm.metallib": "002b114252762aa9203e5820f116a791e5801f9c857a0fd623ef7e8ace8efde3"
+  },
+  "validation": {
+    "swift_typecheck": "114 original files, arm64-apple-macosx14.0, passed",
+    "release_build": "23 original C++ files and 114 Swift files, passed",
+    "engine_math_guard": "safe/precise accepted; fast-math negative control rejected",
+    "canvas": "all seven functions and both render pipeline formats loaded; inventory matches Build 27",
+    "render_comparison": "8 deterministic full-resolution cases, bit-identical uint16 RGBA vs Build 27 on current host",
+    "macos14_physical_device": "not performed"
+  }
+}
